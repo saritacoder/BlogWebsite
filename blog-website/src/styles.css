@@ -46,3 +46,50 @@
     object-fit: cover;
   }
    */
+
+
+   /* 2nd */
+
+
+   .app {
+    text-align: center;
+  }
+  
+  .form-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 400px;
+    margin: 20px auto;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .close-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .blog-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+  }
+  
+  .submit-btn {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
