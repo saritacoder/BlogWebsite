@@ -1,63 +1,8 @@
-// import React, { useState, useContext, useEffect } from 'react';
-// import { BlogContext } from '../context/BlogContext';
-
-// const AddEditBlogModal = () => {
-//   const { addBlog, updateBlog, editingBlog, setEditingBlog } = useContext(BlogContext);
-//   const [formData, setFormData] = useState({ imageUrl: '', title: '', description: '' });
-
-//   useEffect(() => {
-//     if (editingBlog) setFormData(editingBlog);
-//   }, [editingBlog]);
-
-//   const handleSubmit = () => {
-//     if (editingBlog) {
-//       updateBlog({ ...editingBlog, ...formData });
-//     } else {
-//       addBlog({ id: Date.now(), ...formData });
-//     }
-//     closeModal();
-//   };
-
-//   const closeModal = () => {
-//     setFormData({ imageUrl: '', title: '', description: '' });
-//     setEditingBlog(null);
-//   };
-
-//   return (
-//     <div className="modal">
-//       <div className="modal-content">
-//         <label>Image URL</label>
-//         <input
-//           type="text"
-//           value={formData.imageUrl}
-//           onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
-//         />
-//         <label>Title</label>
-//         <input
-//           type="text"
-//           value={formData.title}
-//           onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-//         />
-//         <label>Blog Description</label>
-//         <input
-//           type="text"
-//           value={formData.description}
-//           onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-//         />
-//         <button onClick={handleSubmit}>POST BLOG</button>
-//         <button onClick={closeModal}>CLOSE</button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AddEditBlogModal;
-
-
-//2nd 
 
 import React, { useContext, useState, useEffect } from "react";
 import { BlogContext } from "../context/BlogContext";
+
+
 
 const AddEditBlogForm = ({ toggleForm }) => {
   const { addBlog, updateBlog, editingBlog } = useContext(BlogContext);
@@ -91,6 +36,7 @@ const AddEditBlogForm = ({ toggleForm }) => {
   };
 
   return (
+
     <div className="form-container">
       <div className="form-header">
         <h2>{editingBlog ? "Edit Blog" : "Add New Blog"}</h2>
@@ -118,3 +64,6 @@ const AddEditBlogForm = ({ toggleForm }) => {
 };
 
 export default AddEditBlogForm;
+
+
+

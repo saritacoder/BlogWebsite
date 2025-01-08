@@ -27,40 +27,30 @@ const BlogForm = ({ onClose, onSubmit, editingBlog }) => {
   };
 
   return (
+
+
+
     <div className="modal">
-      <h2>{editingBlog ? "Edit Blog" : "Add New Blog"}</h2>
-      <div>
+    <div>
+      <div className="field">
         <label>Image URL:</label>
-        <input
-          type="text"
-          name="imageUrl"
-          value={formData.imageUrl}
-          onChange={handleChange}
-        />
+        <input type="text" name="imageUrl" value={formData.imageUrl} onChange={handleChange} />
       </div>
-      <div>
+      <div className="field">
         <label>Title:</label>
-        <input
-          type="text"
-          name="title"
-          value={formData.title}
-          onChange={handleChange}
-        />
+        <input type="text" name="title" value={formData.title} onChange={handleChange} />
       </div>
-      <div>
+      <div className="field">
         <label>Description:</label>
-        <input
-          type="text"
-          name="description"
-          value={formData.description}
-          onChange={handleChange}
-        />
+        <input type="text" name="description" value={formData.description} onChange={handleChange} />
       </div>
-      <button onClick={handleSubmit}>
-        {editingBlog ? "Update Blog" : "Post Blog"}
-      </button>
-      <button onClick={onClose}>Close</button>
+      <div className="modal-buttons">
+        <button onClick={handleSubmit}>{editingBlog ? "Update Blog" : "Post Blog"}</button>
+        <button onClick={onClose}>Close</button>
+      </div>
     </div>
+  </div>
+  
   );
 };
 
